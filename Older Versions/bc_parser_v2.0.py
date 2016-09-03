@@ -234,7 +234,12 @@ def parse_utmz(URL,cookie_value):
             utmcsr = cookie_value.split("utmcsr=")
             
             #partition based on |, take the first section
-            utmcsr_value,temp1,temp2 = utmcsr[1].partition('|')
+            try:
+                utmcsr_value,temp1,temp2 = utmcsr[1].partition('|')
+            except:
+                print "Error on URL " + URL + " Cookie Value: " cookie_value
+                utmz_value["Source"]='utmcsr not found'
+                
             utmz_value["Source"]=utmcsr_value
         else:
             utmz_value["Source"]='utmcsr not found' 
