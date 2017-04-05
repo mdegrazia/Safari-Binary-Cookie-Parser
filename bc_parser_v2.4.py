@@ -1,5 +1,5 @@
 #
-#bc_parser.py v2.3
+#bc_parser.py v2.4
 #This program parses the cookies and Google Analytic values from the Mac IOS 
 #Cookies.binarycookies file into a TSV format or TLN format
 #
@@ -45,6 +45,7 @@
 #
 #v2.03 2016-08-29
 #Fixed bug with URL encoded strings
+#2017-04-04 updated to fix URL Lib
 
 __author__ = 'arizona4n6@gmail.com (Mari DeGrazia)'
 __version__ = '1.2'
